@@ -1,0 +1,14 @@
+{
+  "name": "DETAILX | Car Detailing",
+  "short_name": "DETAILX",
+  "description": "Profesionálny detailing vozidiel.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "orientation": "portrait-primary",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
