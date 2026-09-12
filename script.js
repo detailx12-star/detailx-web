@@ -1,31 +1,27 @@
-console.log("DETAILX website loaded");
+const navbar=document.getElementById('navbar');
+const toggle=document.querySelector('.menu-toggle');
+const body=document.body;
 
-const elements = document.querySelectorAll(
-    ".service, .price-box, .gallery img"
-);
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>20),{passive:true});
 
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
-            }
-
-        });
-    },
-    {
-        threshold: 0.15
-    }
-);
-
-elements.forEach(element => {
-
-    element.style.opacity = "0";
-    element.style.transform = "translateY(30px)";
-    element.style.transition = "opacity .7s ease, transform .7s ease";
-
-    observer.observe(element);
-
+toggle?.addEventListener('click',()=>{
+  const open=body.classList.toggle('menu-open');
+  toggle.setAttribute('aria-expanded',String(open));
 });
+
+document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>{
+  body.classList.remove('menu-open');
+  toggle?.setAttribute('aria-expanded','false');
+}));
+
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+}),{threshold:.12,rootMargin:'0px 0px -40px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i%4,3)*70}ms`;observer.observe(el)});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const target=document.querySelector(a.getAttribute('href'));
+  if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'})}
+}));
+
+console.log('DETAILX premium website loaded');
