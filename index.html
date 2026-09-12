@@ -1,180 +1,100 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>DETAILX | Car Detailing</title>
-
-    <meta name="description"
-          content="DETAILX – profesionálny detailing vozidiel. Čistenie interiéru, exteriéru, tepovanie a detailing.">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="DETAILX – profesionálny detailing vozidiel. Čistenie interiéru, exteriéru, tepovanie a detailing.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DETAILX">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>DETAILX | Car Detailing</title>
 </head>
-
 <body>
+  <div class="noise" aria-hidden="true"></div>
 
-<header class="navbar">
-
-    <div class="logo">
-        DETAIL<span>X</span>
-    </div>
-
-    <nav>
-        <a href="#sluzby">Služby</a>
-        <a href="#galeria">Galéria</a>
-        <a href="#cennik">Cenník</a>
-        <a href="#kontakt">Kontakt</a>
-    </nav>
-
-</header>
-
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <p class="small-title">PROFESIONÁLNY DETAILING</p>
-
-        <h1>
-            YOUR CAR.<br>
-            <span>OUR DETAIL.</span>
-        </h1>
-
-        <p>
-            Dopraj svojmu vozidlu čistotu a vzhľad,
-            ktorý si zaslúži.
-        </p>
-
-        <a href="#kontakt" class="button">
-            OBJEDNAŤ DETAILING
-        </a>
-
-    </div>
-
-</section>
-
-
-<section id="sluzby" class="section">
-
-    <p class="small-title">ČO ROBÍME</p>
-
-    <h2>Naše služby</h2>
-
-    <div class="services">
-
-        <div class="service">
-            <h3>Interiér</h3>
-            <p>
-                Komplexné čistenie a detailing interiéru vozidla.
-            </p>
-        </div>
-
-        <div class="service">
-            <h3>Exteriér</h3>
-            <p>
-                Ručné umytie, dekontaminácia a ošetrenie laku.
-            </p>
-        </div>
-
-        <div class="service">
-            <h3>Tepovanie</h3>
-            <p>
-                Hĺbkové čistenie sedadiel a textilných povrchov.
-            </p>
-        </div>
-
-        <div class="service">
-            <h3>Motorový priestor</h3>
-            <p>
-                Precízne čistenie motorového priestoru.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section id="galeria" class="section">
-
-    <p class="small-title">NAŠA PRÁCA</p>
-
-    <h2>Galéria</h2>
-
-    <div class="gallery">
-
-        <img src="images/auto1.jpg" alt="DETAILX detailing">
-        <img src="images/auto2.jpg" alt="DETAILX detailing">
-        <img src="images/auto3.jpg" alt="DETAILX detailing">
-
-    </div>
-
-</section>
-
-
-<section id="cennik" class="section pricing">
-
-    <p class="small-title">CENNÍK</p>
-
-    <h2>Služby & ceny</h2>
-
-    <div class="price-box">
-
-        <h3>INTERIÉR</h3>
-
-        <strong>od 40 €</strong>
-
-        <p>
-            Kompletné čistenie interiéru vozidla.
-        </p>
-
-    </div>
-
-    <div class="price-box">
-
-        <h3>EXTERIÉR</h3>
-
-        <strong>od 30 €</strong>
-
-        <p>
-            Ručné umytie a ošetrenie exteriéru.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section id="kontakt" class="contact">
-
-    <p class="small-title">OBJEDNÁVKA</p>
-
-    <h2>Chceš čisté auto?</h2>
-
-    <p>
-        Kontaktuj nás a dohodneme si termín.
-    </p>
-
-    <a href="https://instagram.com/" class="button">
-        INSTAGRAM
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#top" aria-label="DETAILX domov">
+      <span class="brand-mark">D<span>X</span></span>
+      <span class="brand-word">DETAIL<span>X</span></span>
     </a>
 
-</section>
+    <button class="menu-toggle" aria-label="Otvoriť menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
 
+    <nav class="nav-links" aria-label="Hlavná navigácia">
+      <a href="#sluzby">Služby</a>
+      <a href="#galeria">Galéria</a>
+      <a href="#cennik">Cenník</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
 
-<footer>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">PROFESIONÁLNY DETAILING</p>
+        <h1>YOUR CAR.<br><span>OUR DETAIL.</span></h1>
+        <p class="hero-copy">Dopraj svojmu vozidlu čistotu a vzhľad, ktorý si zaslúži.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="button button-primary">OBJEDNAŤ DETAILING <span>↗</span></a>
+          <a href="#sluzby" class="button button-ghost">POZRIEŤ SLUŽBY</a>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> SCROLL</div>
+    </section>
 
-    <div class="logo">
-        DETAIL<span>X</span>
-    </div>
+    <section id="sluzby" class="section">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">ČO ROBÍME</p><h2>Naše služby</h2></div>
+        <p class="section-intro">Detailná starostlivosť o každý povrch. Čisto, precízne a bez zbytočností.</p>
+      </div>
+      <div class="services">
+        <article class="service reveal"><span class="service-number">01</span><h3>Interiér</h3><p>Komplexné čistenie a detailing interiéru vozidla.</p><span class="service-arrow">↗</span></article>
+        <article class="service reveal"><span class="service-number">02</span><h3>Exteriér</h3><p>Ručné umytie, dekontaminácia a ošetrenie laku.</p><span class="service-arrow">↗</span></article>
+        <article class="service reveal"><span class="service-number">03</span><h3>Tepovanie</h3><p>Hĺbkové čistenie sedadiel a textilných povrchov.</p><span class="service-arrow">↗</span></article>
+        <article class="service reveal"><span class="service-number">04</span><h3>Motorový priestor</h3><p>Precízne čistenie motorového priestoru.</p><span class="service-arrow">↗</span></article>
+      </div>
+    </section>
 
+    <section id="galeria" class="section gallery-section">
+      <div class="section-head reveal"><div><p class="eyebrow">NAŠA PRÁCA</p><h2>Galéria</h2></div><p class="section-intro">Každý detail má význam.</p></div>
+      <div class="gallery">
+        <figure class="gallery-card gallery-wide reveal"><img src="images/auto1.jpg" alt="DETAILX detailing – vozidlo" loading="lazy"><figcaption>DETAILX / 01</figcaption></figure>
+        <figure class="gallery-card reveal"><img src="images/auto2.jpg" alt="DETAILX detailing – detail vozidla" loading="lazy"><figcaption>DETAILX / 02</figcaption></figure>
+        <figure class="gallery-card reveal"><img src="images/auto3.jpg" alt="DETAILX detailing – výsledok práce" loading="lazy"><figcaption>DETAILX / 03</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="cennik" class="section pricing">
+      <div class="section-head reveal"><div><p class="eyebrow">CENNÍK</p><h2>Služby &amp; ceny</h2></div><p class="section-intro">Transparentné ceny od. Finálna cena závisí od veľkosti a stavu vozidla.</p></div>
+      <div class="price-grid">
+        <article class="price-box reveal"><div class="price-top"><span>01</span><span>INTERIÉR</span></div><strong>od 40 €</strong><p>Kompletné čistenie interiéru vozidla.</p><a href="#kontakt">OBJEDNAŤ <span>↗</span></a></article>
+        <article class="price-box reveal"><div class="price-top"><span>02</span><span>EXTERIÉR</span></div><strong>od 30 €</strong><p>Ručné umytie a ošetrenie exteriéru.</p><a href="#kontakt">OBJEDNAŤ <span>↗</span></a></article>
+      </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">OBJEDNÁVKA</p>
+        <h2>Chceš čisté auto<span>?</span></h2>
+        <p>Kontaktuj nás a dohodneme si termín.</p>
+        <a href="https://instagram.com/" class="button button-primary" target="_blank" rel="noopener">INSTAGRAM <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><span class="brand-mark">D<span>X</span></span><span class="brand-word">DETAIL<span>X</span></span></a>
     <p>© 2026 DETAILX. Všetky práva vyhradené.</p>
+  </footer>
 
-</footer>
-
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
